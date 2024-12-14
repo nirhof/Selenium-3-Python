@@ -4,11 +4,11 @@ This project represents the knowledge I gained during my automation course. For 
 ## Key Project Features:
 - **Page Object Design Pattern**: Enhances code maintainability and readability by efficiently interacting with web elements.
 - **Project Layers**: Organized into extensions, workflows, and test cases to create a scalable and maintainable codebase.
-- **Platform Versatility**: Supports testing across multiple platforms, including web applications, mobile applications, REST APIs, Electron apps, and desktop applications.
+- **Platform Versatility**: Supports testing across multiple platforms, including web applications, mobile applications, REST APIs and desktop applications.
 - **Failure Handling**: Uses event listeners for graceful test failure management, ensuring the tests continue to run even when issues arise.
 - **Data-Driven Testing**: Supports external file integration, especially CSV files, to enable dynamic and comprehensive testing. This approach allows the use of a wide range of test data.
 - **Reporting System**: Integrates **Allure** for test reporting, including screenshots and videos, providing detailed insights into test results and helping to identify issues quickly.
-- **Visual Testing**: Integrates **Applitools** to detect visual discrepancies and ensure UI integrity across applications.
+- **Visual Testing**: Integrates **Applitools Eyes** to detect visual discrepancies and ensure UI integrity across applications.
 - **Database Integration**: Supports integration with **MySQL** for thorough database testing (e.g., validating data in the Parabank web application).
 - **Continuous Integration (CI) with Jenkins**: Automates the execution of tests with **Jenkins** to provide timely feedback on code changes and test results.
 
