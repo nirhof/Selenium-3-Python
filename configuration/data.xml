@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Environment>
+    <!--    General -->
+    <WaitTime>15</WaitTime>
+    <ScreenshotPath>./../allure_screen_shots/</ScreenshotPath>
+
+    <!--    Web -->
+    <Browser>edge</Browser>
+    <Url>http://parabank.parasoft.com/parabank/</Url>
+    <DDT_File_users_Location>../ddt/users.csv</DDT_File_users_Location>
+    <Execute_Applitools>yes</Execute_Applitools> <!-- yes/no-->
+    <Applitools_key>4wPTciF3oG7gh6cBIFLNuD7CdwZzG2iygzIFw104t4baM110</Applitools_key> <!-- Token -->
+
+    <!--    Mobile -->
+    <Mobile_Device>Android</Mobile_Device>
+    <Udid>R58W703T0NY</Udid>
+    <App_Package>il.co.amazing.papa</App_Package>
+    <App_Activity>.MainActivity</App_Activity>
+    <Appium_Server>http://localhost:4723/wd/hub</Appium_Server>
+    <Bundle_ID>il.co.amazing.papa</Bundle_ID>     <!--    For IOS -->
+    <Swipe_Duration>200</Swipe_Duration>
+    <Phone_Number>00000000</Phone_Number>
+
+    <!--    API -->
+    <API_Base_Url>http://localhost:3000/</API_Base_Url>
+
+    <!--    Desktop -->
+    <Application_Name>Microsoft.WindowsCalculator_8wekyb3d8bbwe!App</Application_Name>
+    <WinAppDriver_Service>http://127.0.0.1:4723</WinAppDriver_Service>
+
+    <!-- Database - Connection details-->
+    <DB_Host>sql12.freemysqlhosting.net</DB_Host>
+    <DB_Name>sql12748660</DB_Name>
+    <DB_User>sql12748660</DB_User>
+    <DB_Password>jXkk9suU6T</DB_Password>
+
+</Environment>
