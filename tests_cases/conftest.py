@@ -2,12 +2,11 @@ import time
 import allure
 import mysql.connector
 import pytest
-import selenium.webdriver
+import selenium
 import appium.webdriver
+from selenium import webdriver
 # from applitools.selenium import Eyes
-from selenium.webdriver import ActionChains
-# from selenium.webdriver import ActionChains, TouchActions
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver import ActionChains, TouchActions
 from selenium.webdriver.support.event_firing_webdriver import EventFiringWebDriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
@@ -126,23 +125,24 @@ def get_desktop_driver():
 
 
 def get_chrome():
-    srv = Service(ChromeDriverManager().install())  # selenium 4
-    chrome_driver = selenium.webdriver.Chrome(service=srv)  # selenium 4
+    # srv = Service(ChromeDriverManager().install())  # selenium 4
+    # chrome_driver = selenium.webdriver.Chrome(service=srv)  # selenium 4
     # chrome_driver = webdriver.Chrome(ChromeDriverManager().install()) # selenium 3
+    chrome_driver = webdriver.Chrome(ChromeDriverManager().install()) # selenium 3
     return chrome_driver
 
 
 def get_firefox():
-    srv = Service(GeckoDriverManager().install())  # selenium 4
-    firefox_driver = selenium.webdriver.Firefox(service=srv)  # selenium 4
-    # firefox_driver = webdriver.Firefox(executable_path=GeckoDriverManager().install()) # selenium 3
+    # srv = Service(GeckoDriverManager().install())  # selenium 4
+    # firefox_driver = selenium.webdriver.Firefox(service=srv)  # selenium 4
+    firefox_driver = webdriver.Firefox(executable_path=GeckoDriverManager().install()) # selenium 3
     return firefox_driver
 
 
 def get_edge():
-    srv = Service(EdgeChromiumDriverManager().install())  # selenium 4
-    edge_driver = selenium.webdriver.Edge(service=srv)  # selenium 4
-    # edge_driver = webdriver.Edge(EdgeChromiumDriverManager().install()) # selenium 3
+    # srv = Service(EdgeChromiumDriverManager().install())  # selenium 4
+    # edge_driver = selenium.webdriver.Edge(service=srv)  # selenium 4
+    edge_driver = selenium.webdriver.Edge(EdgeChromiumDriverManager().install()) # selenium 3
     return edge_driver
 
 

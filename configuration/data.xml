@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Environment>
     <!--    General -->
-    <WaitTime>15</WaitTime>
+    <WaitTime>20</WaitTime>
     <ScreenshotPath>./../allure_screen_shots/</ScreenshotPath>
+<!--    <ScreenshotPath>./allure_screen_shots/</ScreenshotPath>-->
 
     <!--    Web -->
-    <Browser>edge</Browser>
+    <Browser>firefox</Browser>
     <Url>http://parabank.parasoft.com/parabank/</Url>
     <DDT_File_users_Location>../ddt/users.csv</DDT_File_users_Location>
-    <Execute_Applitools>yes</Execute_Applitools> <!-- yes/no-->
+<!--    <DDT_File_users_Location>ddt/users.csv</DDT_File_users_Location>-->
+    <Execute_Applitools>no</Execute_Applitools> <!-- yes/no-->
     <Applitools_key>4wPTciF3oG7gh6cBIFLNuD7CdwZzG2iygzIFw104t4baM110</Applitools_key> <!-- Token -->
 
     <!--    Mobile -->
@@ -16,7 +18,7 @@
     <Udid>R58W703T0NY</Udid>
     <App_Package>il.co.amazing.papa</App_Package>
     <App_Activity>.MainActivity</App_Activity>
-    <Appium_Server>http://localhost:4723/wd/hub</Appium_Server>
+    <Appium_Server>http://localhost:4730/wd/hub</Appium_Server>
     <Bundle_ID>il.co.amazing.papa</Bundle_ID>     <!--    For IOS -->
     <Swipe_Duration>200</Swipe_Duration>
     <Phone_Number>00000000</Phone_Number>
