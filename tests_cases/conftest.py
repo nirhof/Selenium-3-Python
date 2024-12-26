@@ -161,6 +161,7 @@ def get_android(udid):
     dc['appPackage'] = get_data('App_Package')
     dc['appActivity'] = get_data('App_Activity')
     dc['platformName'] = 'android'
+    dc['autoGrantPermissions'] = True  # Automatically grant permissions
     android_driver = appium.webdriver.Remote(get_data('Appium_Server'), dc)
     return android_driver
 
