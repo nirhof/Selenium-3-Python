@@ -20,6 +20,8 @@ action = None
 action2 = None
 mobile_size = None
 db_connector = None
+
+
 # eyes = Eyes()  # Applitools
 
 
@@ -36,6 +38,7 @@ def init_web_driver(request):
     driver.get(get_data('Url'))
     request.cls.driver = driver
     globals()['action'] = ActionChains(driver)
+    request.cls.action = globals()['action']
     ManagePages.init_web_pages()
     # if get_data('Execute_Applitools').lower() == 'yes':
     #     eyes.api_key = get_data('Applitools_key')
@@ -60,6 +63,20 @@ def init_mobile_driver(request):
     globals()['mobile_size'] = driver.get_window_size()
     request.cls.mobile_size = globals()['mobile_size']
     ManagePages.init_mobile_pages()
+    yield
+    driver.quit()
+
+
+@pytest.fixture(scope='class')
+def init_electron_driver(request):
+    edriver = get_electron_driver()
+    globals()['driver'] = EventFiringWebDriver(edriver, EventListener())
+    driver = globals()['driver']
+    driver.implicitly_wait(int(get_data('WaitTime')))
+    request.cls.driver = driver
+    globals()['action'] = ActionChains(driver)
+    request.cls.action = globals()['action']
+    # ManagePages.init_electron_pages() # To Do
     yield
     driver.quit()
 
@@ -115,6 +132,13 @@ def get_web_driver():
     return driver
 
 
+def get_electron_driver():
+    options = selenium.webdriver.ChromeOptions()
+    options.binary_location = get_data('Electron_App_Path')
+    driver = selenium.webdriver.Chrome(chrome_options=options, executable_path=get_data('Electron_Driver'))
+    return driver
+
+
 def get_desktop_driver():
     dc = {}
     dc['app'] = get_data('Application_Name')
@@ -137,14 +161,14 @@ def get_chrome():
 def get_firefox():
     # srv = Service(GeckoDriverManager().install())  # selenium 4
     # firefox_driver = selenium.webdriver.Firefox(service=srv)  # selenium 4
-    firefox_driver = webdriver.Firefox(executable_path=GeckoDriverManager().install()) # selenium 3
+    firefox_driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())  # selenium 3
     return firefox_driver
 
 
 def get_edge():
     # srv = Service(EdgeChromiumDriverManager().install())  # selenium 4
     # edge_driver = selenium.webdriver.Edge(service=srv)  # selenium 4
-    edge_driver = selenium.webdriver.Edge(EdgeChromiumDriverManager().install()) # selenium 3
+    edge_driver = selenium.webdriver.Edge(EdgeChromiumDriverManager().install())  # selenium 3
     return edge_driver
 
 

@@ -2,14 +2,14 @@
 <Environment>
     <!--    General -->
     <WaitTime>20</WaitTime>
-<!--    <ScreenshotPath>./../allure_screen_shots/</ScreenshotPath>-->
-    <ScreenshotPath>./allure_screen_shots/</ScreenshotPath>
+    <ScreenshotPath>./../allure_screen_shots/</ScreenshotPath>     For PyCharm
+<!--    <ScreenshotPath>./allure_screen_shots/</ScreenshotPath>  &lt;!&ndash;    For Jenkins &ndash;&gt;-->
 
     <!--    Web -->
     <Browser>chrome</Browser>
     <Url>http://parabank.parasoft.com/parabank/</Url>
-<!--    <DDT_File_users_Location>../ddt/users.csv</DDT_File_users_Location>-->
-    <DDT_File_users_Location>ddt/users.csv</DDT_File_users_Location>
+    <DDT_File_users_Location>../ddt/users.csv</DDT_File_users_Location>     For PyCharm
+<!--    <DDT_File_users_Location>ddt/users.csv</DDT_File_users_Location>  &lt;!&ndash;    For Jenkins &ndash;&gt;-->
     <Execute_Applitools>no</Execute_Applitools> <!-- yes/no-->
     <Applitools_key>4wPTciF3oG7gh6cBIFLNuD7CdwZzG2iygzIFw104t4baM110</Applitools_key> <!-- Token -->
 
@@ -25,6 +25,10 @@
 
     <!--    API -->
     <API_Base_Url>http://localhost:3000/</API_Base_Url>
+
+    <!--    Electron -->
+    <Electron_App_Path>C:/Automation/Projects/apps</Electron_App_Path>
+    <Electron_Driver>C:/Automation/Projects/selenium3-python/drivers/electrondriver.exe</Electron_Driver>
 
     <!--    Desktop -->
     <Application_Name>Microsoft.WindowsCalculator_8wekyb3d8bbwe!App</Application_Name>
