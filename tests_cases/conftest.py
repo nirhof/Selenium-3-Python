@@ -128,7 +128,9 @@ def get_chrome():
     # srv = Service(ChromeDriverManager().install())  # selenium 4
     # chrome_driver = selenium.webdriver.Chrome(service=srv)  # selenium 4
     # chrome_driver = webdriver.Chrome(ChromeDriverManager().install()) # selenium 3
-    chrome_driver = webdriver.Chrome(ChromeDriverManager().install()) # selenium 3
+    chrome_driver_path = r"C:\Automation\Projects\selenium3-python\drivers\chromedriver.exe"  # Use raw string for Windows path
+    # Initialize the WebDriver with the specified driver # selenium 3
+    chrome_driver = webdriver.Chrome(executable_path=chrome_driver_path)
     return chrome_driver
 
 

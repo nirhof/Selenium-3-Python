@@ -2,14 +2,14 @@
 <Environment>
     <!--    General -->
     <WaitTime>20</WaitTime>
-    <ScreenshotPath>./../allure_screen_shots/</ScreenshotPath>
-<!--    <ScreenshotPath>./allure_screen_shots/</ScreenshotPath>-->
+<!--    <ScreenshotPath>./../allure_screen_shots/</ScreenshotPath>-->
+    <ScreenshotPath>./allure_screen_shots/</ScreenshotPath>
 
     <!--    Web -->
-    <Browser>firefox</Browser>
+    <Browser>chrome</Browser>
     <Url>http://parabank.parasoft.com/parabank/</Url>
-    <DDT_File_users_Location>../ddt/users.csv</DDT_File_users_Location>
-<!--    <DDT_File_users_Location>ddt/users.csv</DDT_File_users_Location>-->
+<!--    <DDT_File_users_Location>../ddt/users.csv</DDT_File_users_Location>-->
+    <DDT_File_users_Location>ddt/users.csv</DDT_File_users_Location>
     <Execute_Applitools>no</Execute_Applitools> <!-- yes/no-->
     <Applitools_key>4wPTciF3oG7gh6cBIFLNuD7CdwZzG2iygzIFw104t4baM110</Applitools_key> <!-- Token -->
 

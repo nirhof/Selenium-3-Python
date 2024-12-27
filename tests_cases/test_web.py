@@ -49,7 +49,7 @@ class TestWeb:
         # Navigate to the products page on the Parabank application.
         WebFlows.navigate_products_page_parabank()
         # Verify that the number of products on the page is equal to expected.
-        WebFlows.verify_number_of_products(10)
+        WebFlows.verify_number_of_products(11)
 
     # @allure.title('Test05: Verify Parabank Home Screen visually')
     # @allure.description('This test verifies Parabank Home Screen visually.')
