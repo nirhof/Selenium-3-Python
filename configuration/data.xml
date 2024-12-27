@@ -6,7 +6,7 @@
 <!--    <ScreenshotPath>./allure_screen_shots/</ScreenshotPath>  &lt;!&ndash;    For Jenkins &ndash;&gt;-->
 
     <!--    Web -->
-    <Browser>chrome</Browser>
+    <Browser>firefox</Browser>
     <Url>http://parabank.parasoft.com/parabank/</Url>
     <DDT_File_users_Location>../ddt/users.csv</DDT_File_users_Location>     For PyCharm
 <!--    <DDT_File_users_Location>ddt/users.csv</DDT_File_users_Location>  &lt;!&ndash;    For Jenkins &ndash;&gt;-->
